@@ -11,11 +11,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     url: jdbc:mysql://localhost:3306/datasophon?useUnicode=true&characterEncoding=utf-8
-    username: root
-    password: root
+    username: datasophon
+    password: datasophon
     driver-class-name: com.mysql.cj.jdbc.Driver
-  resources:
-    static-locations: classpath:/front/views/
   #json格式化全局配置
   jackson:
     time-zone: GMT+8
@@ -28,6 +26,11 @@ spring:
   messages:
     basename: i18n/messages
     encoding: UTF-8
+  main:
+    allow-circular-references: true
+  web:
+    resources:
+      static-locations: classpath:/front/views/
 #mybatis
 mybatis-plus:
   mapper-locations: classpath*:/mapper/*.xml

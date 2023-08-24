@@ -22,10 +22,10 @@
 export default {
   path() {
     let path = ''
-    if(process.env.NODE_ENV === 'production') {
-      path = process.env.VUE_APP_API_BASE_URL
-    }
-    console.log(path, 'path地址', process.env.NODE_ENV)
+    // if(process.env.NODE_ENV === 'production') {
+    //   path = process.env.VUE_APP_API_BASE_URL
+    // }
+    // console.log(path, 'path地址', process.env.NODE_ENV)
     return path
   }
 }
